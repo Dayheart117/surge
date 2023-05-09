@@ -1,15 +1,11 @@
-import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import './App.css';
-import routes from './routes';
+import React from 'react'
+import IndexRouter from './router/IndexRouter'
+import RouteGuard from './router/routerGuard'
 
-function App() {
-  const element = useRoutes(routes)
+export default function App() {
   return (
-    <div className="App">
-      {element}
+    <div style={{ height: '100%' }}>
+      <RouteGuard>{IndexRouter()}</RouteGuard>
     </div>
-  );
+  )
 }
-
-export default App;
